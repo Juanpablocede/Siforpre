@@ -1,0 +1,87 @@
+:root {
+
+  --primary:#00bfa5 !important;
+  --secondary: #00bcd4 !important;
+  --success: #00bcd4;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #c62828;
+  --light: #00bfa5;
+  --dark: #00bfa5;
+  --gray: #e0e0e0;
+}
+a{
+  color: var(--primary) !important;
+}
+.btn-primary,
+.btn-primary:hover{
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: white !important;
+}
+.btn-secondary,
+.btn-secondary:hover{
+  background-color: var(--secondary)!important;
+  border-color: var(--secondary) !important;
+  color: white !important;
+}
+.form-control:active,
+.form-control:focus{
+  border-color:  var(--secondary) !important;
+  box-shadow: none !important;
+}
+.text-primary{
+  color: var(--primary) !important;
+}
+.text-secondary{
+  color: var(--secondary) !important;
+}
+
+.btn-link{
+  color: var(--primary);
+}
+.btn-link:hover,
+.btn-link:active,
+.btn-link:focus {
+  text-decoration: none !important;
+  color: var(--primary);
+}
+.table{
+  font-size: 12px !important;
+}
+.paginate_button.next,.paginate_button.previous{
+  font-size: 12px !important;
+  background-color: var(--secondary) !important;
+  color: #212121 !important;
+}
+.paginate_button{
+  font-size: 12px !important;
+  padding: 0.1em 0.5em 0.1em 0.5em !important;
+  margin-right: 5px !important;
+  margin-left: 5px !important;
+  border: none !important;
+  background: var(--secondary) !important;
+  background-color: var(--secondary);
+  color: white !important;
+  -moz-box-shadow: 0 8px 28px 0 rgba(0, 0, 0, 0.09) !important;
+  -webkit-box-shadow: 0 5px 28px 0 rgba(0, 0, 0, 0.09) !important;
+  box-shadow: 0 5px 28px 0 rgba(0, 0, 0, 0.09) !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current{
+  color: white !important;
+  font-weight: bold !important;
+}
+.dataTables_wrapper .dataTables_paginate{
+  margin-top: 1em !important;
+}
+a.a-table,
+a.a-table:hover{
+  color: #757575 !important;
+}
+table.dataTable.no-footer{
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.dataTables_filter{
+  display: none !important;
+}

@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+html,body
+{
+	color: #3F3F3F;
+	font-family: 'Roboto Slab', serif !important;
+}
+
+.fixed-left{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+a:hover{
+	text-decoration: none !important;
+	color: var(--secondary) !important;
+}
+
+#menu{
+	height: 100vh;
+	background-color: #fafafa;
+	border-right: 1px solid #e0e0e0;
+}
+
+#main-content{
+	background-color:#eeeeee;
+}
+.bold{
+	font-weight: bold;
+}
+.grey-text{
+	color: #9e9e9e;
+}
+.oblique{
+	font-style: oblique !important;
+}
+.show-details{
+	border-bottom: 1px solid #e0e0e0;
+}
+ul {
+  list-style-type: none !important;
+}
+
+.w-100
+{
+	margin: 0 !important;
+}
+
+.preloader
+{
+	 position: fixed;
+	 left: 0px;
+	 top: 0px;
+	 width: 100%;
+	 height: 100%;
+	 z-index: 9999;
+	 background: url("../imagenes/loader.gif") 50% 50% no-repeat rgb(249,249,249);
+	 opacity: .8;
+}
+.card-menu{
+	background-color: var(--secondary) !important;
+}
+.menu-link{
+	color: var(--secondary);
+	font-weight: bold;
+}
+.menu-header{
+	border-bottom: 1px solid #e0e0e0;
+}
+.sub-menu{
+	padding-left: 2em;
+}
+.sub-menu-item{
+	font-size: 12px !important;
+}
+.menu-title{
+	font-size: 16px;
+	font-weight: bolder;
+	color: var(--secondary);
+}
+ul li.card-head{
+	background-color: var(--primary);
+	color: white;
+}
+.seccion01
+{
+	padding-top: 9em;
+	background-color: #E0E0E0;
+	height: 350px;
+}
+
+.seccion02
+{
+	text-align: center;
+	background-color: #ECEFF1;
+	height: 50px;
+	margin-top: -64px;
+}
+
+
+.secciontitulo
+{
+	background-color: #ECEFF1;
+	padding-top: 2em;
+}
+
+.imagenlogo
+{
+	width: 120px;
+	height: 75px;
+	position: relative;
+  left: -15px;
+
+}
+
+
+.form-control
+{
+	margin-bottom: 15px;
+}
+
+.card-content{
+	padding: 2em 5em 3em 5em!important;
+	-moz-box-shadow: 0 8px 28px 0 rgba(0, 0, 0, 0.09);
+	-webkit-box-shadow: 0 5px 28px 0 rgba(0, 0, 0, 0.09);
+	box-shadow: 0 5px 28px 0 rgba(0, 0, 0, 0.09);
+	border: none!important;
+}
+
+
+.card-table{
+	padding: 1em 3em 1em 3em!important;
+	-moz-box-shadow: 0 8px 28px 0 rgba(0, 0, 0, 0.09);
+	-webkit-box-shadow: 0 5px 28px 0 rgba(0, 0, 0, 0.09);
+	box-shadow: 0 5px 28px 0 rgba(0, 0, 0, 0.09);
+	border: none!important;
+}
+
+.mensaje-eliminar
+{
+	background-color: var(--danger);
+}
+
+
+.bg{
+		background: linear-gradient(180deg, #eadcc5 58%, #fffeff 0);
+}
+.vista03
+{
+
+	/*background-color: #F4F8F7;
+	border: none;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+	padding: 50px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: -250px;*/
+}
+
+.vista04
+{
+	text-align: center;
+	background-color: #ECEFF1;
+	border: none;
+	height: 80px;
+	padding-top: 3px;
+}
+
+/*
+.seccion02 h2
+{
+		margin-top: 15px;
+}
+*/
+
+th
+{
+	background-color: #0193a5;
+	color: white;
+}
+
+.imagenlogolista
+{
+	text-align: center;
+	background-color: #ECEFF1;
+	border: none;
+	width: 120px;
+	height: 80px;
+	position: relative;
+	left: -15px;
+}
+
+.salida
+{
+	width: 20px;
+	height: 20px;
+}
+
+.vista05
+{
+	background-color: #f0f4c3;
+}
+
+.eliminar
+{
+		color: var(--danger);
+		width: 15px;
+		height: 15px;
+		background-color: transparent;
+		border: none;
+}
+
+
+.figura
+{
+	width: 15px;
+	height: 15px;
+}
+
+.detalle
+{
+	height: 8px;
+}
+
+.cabecera
+{
+		height: 140px;
+		background-color: RGB(25,111,61);
+}
+
+.titulocabecera
+{
+		height: 140px;
+		text-align:center;
+		padding-top: 40px;
+	  color: RGB(154,125,10)
+}
+
+.imagencabecera
+{
+	width: 140px;
+	height: 140px;
+	margin-left: -15px;
+}
+
+.btn-outline{
+	border: none !important;
+	background-color: transparent !important;
+}
+
+
+.imagenbuscador
+{
+	width: 25px;
+	height: 25px;
+}
+/*
+.titulonombrerecurso.titulonombrecosto.titulonombreempresa.titulonombreparte.titulonombrecuenta.titulonombreproyecto
+{
+	width: 500px;
+}
+
+.tituloparte
+{
+	width: 800px;
+}
+
+.titulonombreunidad
+{
+	width: 800px;
+}
+
+.detalleprecio
+{
+	text-align: right;
+}
+.tituloprecio
+{
+	text-align: right;
+}
+*/
