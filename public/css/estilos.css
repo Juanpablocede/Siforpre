@@ -25,7 +25,8 @@ a:hover{
 }
 
 #main-content{
-	background-color:#eeeeee;
+	/*background-color:#eeeeee;*/
+	background-color: #E0E0E0;
 }
 .bold{
 	font-weight: bold;
@@ -230,11 +231,11 @@ th
 		background-color: RGB(25,111,61);
 }
 
-.titulocabecera
+.tituloprincipal
 {
 		height: 140px;
 		text-align:center;
-		padding-top: 40px;
+		/*padding-top: 40px;*/
 	  color: RGB(154,125,10)
 }
 
@@ -256,6 +257,17 @@ th
 	width: 25px;
 	height: 25px;
 }
+
+.imagenprincipal
+{
+	width: 100%;
+	height: 605px;
+	position: relative;
+}
+
+
+
+
 /*
 .titulonombrerecurso.titulonombrecosto.titulonombreempresa.titulonombreparte.titulonombrecuenta.titulonombreproyecto
 {

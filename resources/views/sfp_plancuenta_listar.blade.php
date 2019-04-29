@@ -19,7 +19,7 @@
 									<a class="btn btn-primary" href="/sfp-plancuentas/crear" name="guardar" id="guardar">
 										<i class="fas fa-plus-circle"></i>
 									</a>
-									<a class="btn btn-primary" href="{{ URL::previous() }}" name="salir" id="salir">
+									  <a class="btn btn-primary" href="/siforpre" name="salir" id="salir">
 										<i class="fas fa-sign-out-alt"></i>
 									</a>
 								</div>

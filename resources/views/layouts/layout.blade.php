@@ -14,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables.min.css">
 	<link rel="stylesheet" type="text/css" href="../../css/override.css">
 	<link rel="stylesheet" type="text/css" href="../../css/easy-autocomplete.min.css">
-	<link rel="shortcut icon" href="../../imagenes/siforpre-logo.png">
+	<link rel="shortcut icon" href="../../imagenes/maderas02.png">
 
 	<!--
 	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
@@ -43,7 +43,7 @@
 	<div class="row w-100">
 		<div class="col-2 fixed-left p-0" id="menu">
 			<div class="p-1">
-					<img width="150px" src="../../imagenes/siforpre-logo.png">
+					<img width="150px" src="../../imagenes/maderas02.png">
 			</div>
 			<div id="accordion">
 			    <div class="menu-header p-1" id="datosBasicos">
