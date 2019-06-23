@@ -29,11 +29,11 @@
 					<table id="DataTabla" class="table table-hover">
 						<thead>
 							<tr>
-								<th class="titulo" scope="col">Código</th>
-								<th class="titulo" scope="col">Nombre</th>
-								<th class="titulo" scope="col">Parte</th>
-								<th class="titulo" scope="col">U/M</th>
-								<th class="titulo" scope="col">Precio</th>
+								<th class="titulorecurso" scope="col">Código</th>
+								<th class="titulocurso" scope="col">Nombre</th>
+								<th class="titulocurso" scope="col">Parte</th>
+								<th class="titulocurso" scope="col">U/M</th>
+								<th class="titulocurso" scope="col">Precio</th>
 								<th class="tituloactualizar" scope="col">&nbsp;</th>
 								<th class="tituloeliminar" scope="col">&nbsp;</th>
 							</tr>
@@ -54,7 +54,7 @@
 								 </td>
 
 								 <td>
-										<button style="cursor:pointer" class="eliminar" data-toggle="modal" data-target="#modal-eliminar-recurso" type="submit">
+										<button style="cursor:pointer" class="eliminar eliminar-recurso" data-target="#eliminar-recurso-{!! $recurso->id_registro !!}" data-toggle="modal" type="button">
 												<i class="eliminar fa fa-trash-alt"></i>
 										</button>
 								</td>
@@ -73,23 +73,26 @@
 		</div>
 	</div>
 </div>
-@if($recursos->count()>0)
+@foreach($recursos as $recurso)
 <!-- Modal -->
-<div class="modal fade" id="modal-eliminar-recurso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ¿Estás seguro que deseas eliminar este recurso?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-				<form  action="{!! action('Sfp_recursosController@destroy', $recurso->id_registro)  !!}" method="post">
+<div class="modal fade" id="eliminar-recurso-{!! $recurso->id_registro !!}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				¿Estás seguro que deseas eliminar este recurso?
+				<div class="mensaje-eliminar">
+					{!!$recurso->id_recurso !!} {!! $recurso->nombre_recurso !!}
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+				<form id="form-eliminar-recurso" action="{!! action('Sfp_recursosController@destroy', $recurso->id_registro)  !!}" method="post">
 					 <input type="hidden" name="_token" value="{!! csrf_token() !!}">
 					 <a class="figura">
 						 <button class="btn btn-primary" type="submit">
@@ -97,9 +100,9 @@
 						 </button>
 					 </a>
 				</form>
-      </div>
-    </div>
-  </div>
+			</div>
+		</div>
+	</div>
 </div>
-@endif
+@endforeach
 @endsection

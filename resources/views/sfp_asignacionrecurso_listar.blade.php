@@ -29,30 +29,30 @@
 					<table id="DataTabla" class="table table-responsive table-hover">
 						<thead>
 							<tr>
-								<th class="titulo" scope="col">Empresa</th>
-								<th class="titulo" scope="col">Año</th>
-								<th class="titulo" scope="col">Proyecto</th>
-								<th class="titulo" scope="col">Unidad</th>
-								<th class="titulo" scope="col">Acción</th>
-								<th class="titulo" scope="col">Actividad</th>
-								<th class="titulo" scope="col">Fuente</th>
-								<th class="titulo" scope="col">Tipo</th>
-								<th class="titulo" scope="col">Recurso</th>
-								<th class="titulo" scope="col">Precio</th>
-								<th class="titulo" scope="col">Plancuenta</th>
-								<th class="titulo" scope="col">Escenario</th>
-								<th class="titulo" scope="col">Enero</th>
-								<th class="titulo" scope="col">Febrero</th>
-								<th class="titulo" scope="col">Marzo</th>
-								<th class="titulo" scope="col">Abril</th>
-								<th class="titulo" scope="col">Mayo</th>
-								<th class="titulo" scope="col">Junio</th>
-								<th class="titulo" scope="col">Julio</th>
-								<th class="titulo" scope="col">Agosto</th>
-								<th class="titulo" scope="col">Septiembre</th>
-								<th class="titulo" scope="col">Octubre</th>
-								<th class="titulo" scope="col">Noviembre</th>
-								<th class="titulo" scope="col">Diciembre</th>
+								<th class="" scope="col">Empresa</th>
+								<th class="" scope="col">Año</th>
+								<th class="" scope="col">Proyecto</th>
+								<th class="" scope="col">Unidad</th>
+								<th class="" scope="col">Acción</th>
+								<th class="" scope="col">Actividad</th>
+								<th class="" scope="col">Fuente</th>
+								<th class="" scope="col">Tipo</th>
+								<th class="" scope="col">Recurso</th>
+								<th class="" scope="col">Precio</th>
+								<th class="" scope="col">Plancuenta</th>
+								<th class="" scope="col">Escenario</th>
+								<th class="" scope="col">Enero</th>
+								<th class="" scope="col">Febrero</th>
+								<th class="" scope="col">Marzo</th>
+								<th class="" scope="col">Abril</th>
+								<th class="" scope="col">Mayo</th>
+								<th class="" scope="col">Junio</th>
+								<th class="" scope="col">Julio</th>
+								<th class="" scope="col">Agosto</th>
+								<th class="" scope="col">Septiembre</th>
+								<th class="" scope="col">Octubre</th>
+								<th class="" scope="col">Noviembre</th>
+								<th class="" scope="col">Diciembre</th>
 								<th class="tituloactualizar" scope="col">&nbsp;</th>
 								<th class="tituloeliminar" scope="col">&nbsp;</th>
 							</tr>

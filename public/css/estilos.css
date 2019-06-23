@@ -265,6 +265,13 @@ th
 	position: relative;
 }
 
+.titulo
+{
+	text-align: center;
+	padding-top: 220px;
+	font-family: 'Roboto Slab', serif !important;
+	color: RGB(154,125,10)
+}
 
 
 

@@ -30,11 +30,11 @@
 					<table id="DataTabla" class="table table-hover">
 						<thead>
 							<tr>
-								<th class="titulo" scope="col">Empresa</th>
-								<th class="titulo" scope="col">Año</th>
-								<th class="titulo" scope="col">Proyecto</th>
-								<th class="titulo" scope="col">Nombre</th>
-								<th class="titulo" scope="col">Tipo</th>
+								<th class="" scope="col">Empresa</th>
+								<th class="" scope="col">Año</th>
+								<th class="" scope="col">Proyecto</th>
+								<th class="" scope="col">Nombre</th>
+								<th class="" scope="col">Tipo</th>
 								<th class="tituloactualizar" scope="col">&nbsp;</th>
 								<th class="tituloeliminar" scope="col">&nbsp;</th>
 							</tr>
@@ -87,6 +87,9 @@
 			</div>
 			<div class="modal-body">
 				¿Estás seguro que deseas eliminar este proyecto?
+				<div class="mensaje-eliminar">
+					{!! $proyecto->id_proyecto !!} {!! $proyecto->nombre_proyecto !!}
+				</div>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>

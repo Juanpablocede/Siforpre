@@ -49,11 +49,10 @@
 								 </td>
 
 								 <td>
-									<button style="cursor:pointer" class="eliminar" data-toggle="modal" data-target="#modal-eliminar-plancuenta" type="submit">
-										<i class="eliminar fa fa-trash-alt"></i>
+									<button style="cursor:pointer" class="eliminar eliminar-plancuenta" data-target="#eliminar-plancuenta-{!! $plancuenta->id_registro !!}" data-toggle="modal" type="button">
+											<i class="eliminar fa fa-trash-alt"></i>
 									</button>
 								</td>
-
 							</tr>
 					        @endforeach
 					        @else
@@ -69,23 +68,27 @@
 		</div>
 	</div>
 </div>
-@if($plancuentas->count()>0)
+
+@foreach($plancuentas as $plancuenta)
 <!-- Modal -->
-<div class="modal fade" id="modal-eliminar-plancuenta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ¿Estás seguro que deseas eliminar Este Plan de Cuenta?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-				<form  action="{!! action('Sfp_plancuentasController@destroy', $plancuenta->id_registro)  !!}" method="post">
+<div class="modal fade" id="eliminar-plancuenta-{!! $plancuenta->id_registro !!}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				¿Estás seguro que deseas eliminar este plan de cuentas?
+				<div class="mensaje-eliminar">
+					{!! $plancuenta->id_plancuenta !!} {!! $plancuenta->nombre_cuenta !!}
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+				<form id="form-eliminar-placuenta" action="{!! action('Sfp_plancuentasController@destroy', $plancuenta->id_registro)  !!}" method="post">
 					 <input type="hidden" name="_token" value="{!! csrf_token() !!}">
 					 <a class="figura">
 						 <button class="btn btn-primary" type="submit">
@@ -93,9 +96,9 @@
 						 </button>
 					 </a>
 				</form>
-      </div>
-    </div>
-  </div>
+			</div>
+		</div>
+	</div>
 </div>
-@endif
+@endforeach
 @endsection

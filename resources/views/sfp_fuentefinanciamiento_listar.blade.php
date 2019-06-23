@@ -30,10 +30,10 @@
 					<table id="DataTabla" class="table table-hover">
 						<thead>
 							<tr>
-								<th class="titulo" scope="col">Empresa</th>
-								<th class="titulo" scope="col">Año</th>
-								<th class="titulo" scope="col">Fuente</th>
-								<th class="titulo" scope="col">Nombre</th>
+								<th class="" scope="col">Empresa</th>
+								<th class="" scope="col">Año</th>
+								<th class="" scope="col">Fuente</th>
+								<th class="" scope="col">Nombre</th>
 								<th class="tituloactualizar" scope="col">&nbsp;</th>
 								<th class="tituloeliminar" scope="col">&nbsp;</th>
 							</tr>

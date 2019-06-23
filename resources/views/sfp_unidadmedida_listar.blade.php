@@ -48,7 +48,7 @@
 								 </td>
 
 								 <td>
-										<button style="cursor:pointer" class="eliminar" data-toggle="modal" data-target="#modal-eliminar-unidadmedida" type="submit">
+										<button style="cursor:pointer" class="eliminar eliminar-unidadmedida" data-target="#eliminar-unidadmedida-{!! $unidadmedida->id_registro !!}" data-toggle="modal" type="button">
 												<i class="eliminar fa fa-trash-alt"></i>
 										</button>
 								</td>
@@ -67,23 +67,26 @@
 		</div>
 	</div>
 </div>
-@if($unidadmedidas->count()>0)
+@foreach($unidadmedidas as $unidadmedida)
 <!-- Modal -->
-<div class="modal fade" id="modal-eliminar-unidadmedida" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ¿Estás seguro que deseas eliminar esta unidad de medida?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-				<form  action="{!! action('Sfp_unidadmedidasController@destroy', $unidadmedida->id_registro)  !!}" method="post">
+<div class="modal fade" id="eliminar-unidadmedida-{!! $unidadmedida->id_registro !!}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				¿Estás seguro que deseas eliminar esta unidad de medida?
+				<div class="mensaje-eliminar">
+					{!! $unidadmedida->id_unimed !!} {!! $unidadmedida->nombre_unidad !!}
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+				<form id="form-eliminar-unidadmedida" action="{!! action('Sfp_unidadmedidasController@destroy', $unidadmedida->id_registro)  !!}" method="post">
 					 <input type="hidden" name="_token" value="{!! csrf_token() !!}">
 					 <a class="figura">
 						 <button class="btn btn-primary" type="submit">
@@ -91,9 +94,9 @@
 						 </button>
 					 </a>
 				</form>
-      </div>
-    </div>
-  </div>
+			</div>
+		</div>
+	</div>
 </div>
-@endif
+@endforeach
 @endsection

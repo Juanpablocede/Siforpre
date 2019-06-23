@@ -29,13 +29,13 @@
 					<table id="DataTabla" class="table table-hover">
 						<thead>
 							<tr>
-								<th class="titulo" scope="col">Empresa</th>
-								<th class="titulo" scope="col">Año</th>
-								<th class="titulo" scope="col">Proyecto</th>
-								<th class="titulo" scope="col">Unidad</th>
-								<th class="titulo" scope="col">Acción</th>
-								<th class="titulo" scope="col">Actividad</th>
-								<th class="titulo" scope="col">Nombre</th>
+								<th class="" scope="col">Empresa</th>
+								<th class="" scope="col">Año</th>
+								<th class="" scope="col">Proyecto</th>
+								<th class="" scope="col">Unidad</th>
+								<th class="" scope="col">Acción</th>
+								<th class="" scope="col">Actividad</th>
+								<th class="" scope="col">Nombre</th>
 								<th class="tituloactualizar" scope="col">&nbsp;</th>
 								<th class="tituloeliminar" scope="col">&nbsp;</th>
 							</tr>

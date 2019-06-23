@@ -7,7 +7,7 @@
 		<div class="col-md-12">
 			<img class="imagenprincipal" src="../../imagenes/presupuesto.png">
 		</div>
-		<!--<div class="col-md-12">
+		<!--<div class="col-md-12 titulo">
 			<h1 class="tituloprincipal">Sistema de Formulaciòn Presupuestaria SIFORPRE</h1>
 		</div>!-->
 </div>

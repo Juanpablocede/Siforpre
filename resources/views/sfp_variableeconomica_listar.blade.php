@@ -30,21 +30,21 @@
 					<table id="DataTabla" class="table table-responsive table-hover">
 						<thead>
 							<tr>
-								<th class="titulo" scope="col">Código</th>
-								<th class="titulo" scope="col">Año</th>
-								<th class="titulo" scope="col">Nombre</th>
-								<th class="titulo" scope="col">Enero</th>
-								<th class="titulo" scope="col">Febrero</th>
-								<th class="titulo" scope="col">Marzo</th>
-								<th class="titulo" scope="col">Abril</th>
-								<th class="titulo" scope="col">Mayo</th>
-								<th class="titulo" scope="col">Junio</th>
-								<th class="titulo" scope="col">Julio</th>
-								<th class="titulo" scope="col">Agosto</th>
-								<th class="titulo" scope="col">Septiembre</th>
-								<th class="titulo" scope="col">Octubre</th>
-								<th class="titulo" scope="col">Noviembre</th>
-								<th class="titulo" scope="col">Diciembre</th>
+								<th class="tituloveconomiva" scope="col">Código</th>
+								<th class="tituloveconomiva" scope="col">Año</th>
+								<th class="tituloveconomiva" scope="col">Nombre</th>
+								<th class="tituloveconomiva" scope="col">Enero</th>
+								<th class="tituloveconomiva" scope="col">Febrero</th>
+								<th class="tituloveconomiva" scope="col">Marzo</th>
+								<th class="tituloveconomiva" scope="col">Abril</th>
+								<th class="tituloveconomiva" scope="col">Mayo</th>
+								<th class="tituloveconomiva" scope="col">Junio</th>
+								<th class="tituloveconomiva" scope="col">Julio</th>
+								<th class="tituloveconomiva" scope="col">Agosto</th>
+								<th class="tituloveconomiva" scope="col">Septiembre</th>
+								<th class="tituloveconomiva" scope="col">Octubre</th>
+								<th class="tituloveconomiva" scope="col">Noviembre</th>
+								<th class="tituloveconomiva" scope="col">Diciembre</th>
 								<th class="tituloactualizar" scope="col">&nbsp;</th>
 								<th class="tituloeliminar" scope="col">&nbsp;</th>
 							</tr>
@@ -75,7 +75,7 @@
 								 </td>
 
 								 <td>
-										<button style="cursor:pointer" class="eliminar" data-toggle="modal" data-target="#modal-eliminar-veconomica" type="submit">
+										<button style="cursor:pointer" class="eliminar eliminar-veconomiva" data-target="#eliminar-veconomica-{!! $veconomica->id_registro !!}" data-toggle="modal" type="button">
 												<i class="eliminar fa fa-trash-alt"></i>
 										</button>
 								</td>
@@ -94,23 +94,26 @@
 		</div>
 	</div>
 </div>
-@if($veconomicas->count()>0)
+@foreach($veconomicas as $veconomica)
 <!-- Modal -->
-<div class="modal fade" id="modal-eliminar-veconomica" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ¿Estás seguro que deseas eliminar esta variable económica?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-				<form  action="{!! action('Sfp_variableeconomicasController@destroy', $veconomica->id_registro)  !!}" method="post">
+<div class="modal fade" id="eliminar-veconomica-{!! $veconomica->id_registro !!}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				¿Estás seguro que deseas eliminar esta variable economica?
+				<div class="mensaje-eliminar">
+					{!! $veconomica->id_variable !!} {!! $veconomica->nombre_variable !!}
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+				<form id="form-eliminar-veconomica" action="{!! action('Sfp_variableeconomicasController@destroy', $veconomica->id_registro)  !!}" method="post">
 					 <input type="hidden" name="_token" value="{!! csrf_token() !!}">
 					 <a class="figura">
 						 <button class="btn btn-primary" type="submit">
@@ -118,9 +121,9 @@
 						 </button>
 					 </a>
 				</form>
-      </div>
-    </div>
-  </div>
+			</div>
+		</div>
+	</div>
 </div>
-@endif
+@endforeach
 @endsection

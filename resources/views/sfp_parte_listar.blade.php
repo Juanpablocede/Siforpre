@@ -80,7 +80,10 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				¿Estás seguro que deseas eliminar esta parte?
+				¿Estás seguro que deseas eliminar este nro. de parte?
+				<div class="mensaje-eliminar">
+					{!! $parte->id_parte !!} {!! $parte->nombre_parte !!}
+				</div>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
